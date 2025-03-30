@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH-Tube</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="Resources/favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Styles -->
+    <style>
+        .font {
+            font-family: "Winky Sans", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font">
+    <!-- Header-Nav -->
+    <header>
+        <nav class="w-11/12 mx-auto flex justify-between items-center mt-4 border-b-2 border-slate-300 py-4">
+            <div><img class="w-[120px]" src="Resources/Logo.png" alt=""></div>
+            <div><button class="btn btn-soft text-xl">Sort By View</button></div>
+            <div><button class="btn btn-error text-xl">Blog</button></div>
+        </nav>
+    </header>
+    <nav id="category-container" class="flex py-5 justify-center gap-5">
+        <div>
+            <button class="btn btn-sm bg-red-400 text-white">ALL</button>
+        </div>
+        <!-- Dynamic buttons added here -->
+    </nav>
+
+    <main>
+        <section id="video-container" class="w-11/12 mx-auto grid grid-cols-4 gap-5">
+            <!-- Dynamic Video Cards added here -->
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./script/index.js"></script>
+</body>
+
+</html>
