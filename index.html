@@ -36,18 +36,27 @@
     <header>
         <nav class="w-11/12 mx-auto flex justify-between items-center mt-4 border-b-2 border-slate-300 py-4">
             <div><img class="w-[120px]" src="Resources/Logo.png" alt=""></div>
-            <div><button class="btn btn-soft text-xl">Sort By View</button></div>
-            <div><button class="btn btn-error text-xl">Blog</button></div>
+            <div>
+                <label class="input">
+                <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></g></svg>
+                <input id="search-input" type="search" required placeholder="Search"/>
+              </label>
+            </div>
+            <div><button class="btn btn-error text-xl">Sort by View</button></div>
         </nav>
     </header>
     <nav id="category-container" class="flex py-5 justify-center gap-5">
         <div>
-            <button onclick="loadVideos()" class="btn btn-sm hover:bg-red-400 hover:text-white">ALL</button>
+            <button id="btn-all" onclick="loadVideos()" class="btn btn-sm hover:bg-red-400 hover:text-white">ALL</button>
         </div>
         <!-- Dynamic buttons added here -->
     </nav>
 
     <main>
+        <section id="loader" class="text-center py-10 hidden">
+            <span class="loading loading-dots loading-xl"></span>
+            <span class="loading loading-dots loading-xl"></span>
+        </section>
         <section id="video-container" class="w-11/12 mx-auto grid grid-cols-4 gap-5">
             <!-- Dynamic Video Cards added here -->
              <div class="py-20 col-span-full flex flex-col justify-center items-center text-center">
@@ -65,3 +74,14 @@
 </body>
 
 </html>
+
+
+<!-- <button class="btn" onclick="my_modal_2.showModal()">open modal</button> -->
+<dialog id="video_details" class="modal">
+  <div class="modal-box">
+    <div id="details-container"></div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
